@@ -30,6 +30,8 @@ def update_product(request, p_id):
     return render(request, 'forms.html', {
         "form": form
     })
+
+
 def delete_product(request, p_id):
-    Product.objects.get(pk = p_id).delete()
+    Product.objects.get(pk=p_id).delete()
     return HttpResponse('delete successful')
